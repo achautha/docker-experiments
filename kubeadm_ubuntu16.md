@@ -8,7 +8,7 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
 apt-get install -y kubelet=1.10.0-00 kubeadm=1.10.0-00 kubectl=1.10.0-00
-add below line to master in file /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+# add below line to master in file /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 Environment="KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs"
 kubeadm init --kubernetes-version v1.10.0 --pod-network-cidr=10.244.0.0/16 --apiserver-bind-port=443
 kubectl taint nodes --all node-role.kubernetes.io/master-
