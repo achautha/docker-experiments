@@ -1,4 +1,4 @@
-# docker-experiments
+# docker-experiments [ Deprecated ]
 Experiments with various aspects of docker technology
 
 1. [dockermachine-ec2.sh](https://github.com/achautha/docker-experiments/blob/master/dockermachine-ec2.sh) 
