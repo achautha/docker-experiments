@@ -1,0 +1,15 @@
+on: pull_request
+name: CI
+jobs:
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: technote-space/get-diff-action@v6
+        with:
+          FILES: |
+            util.sh
+            README.md
+      - name: Show diff
+        run: echo env.GIT_DFF
