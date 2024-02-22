@@ -12,4 +12,4 @@ jobs:
             util.sh
             README.md
       - name: Show diff
-        run: echo env.GIT_DFF
+        run: echo {{ env.GIT_DFF }} 
